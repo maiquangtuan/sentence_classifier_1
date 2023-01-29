@@ -1,9 +1,9 @@
 # sentence_classifier_1
-classify sentence
-decode table
-0	skill
-1	lesson learned
-2	goals
-3	interests
-4	experience
-5	randoms
+classify sentence<br />
+decode table<br />
+0	skill<br />
+1	lesson learned<br />
+2	goals<br />
+3	interests<br />
+4	experience<br />
+5	randoms<br />
