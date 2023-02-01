@@ -17,10 +17,12 @@ def init():
 def inference(model_inputs:dict) -> dict:
     global tokenizer,session
 
-    
+    model_input = model_inputs.get('input', None)
+    if  model_input == None:
+        return {'message': "No prompt provided"}
     # Parse out your arguments
     inputs = tokenizer(
-        model_inputs,
+        model_input,
         padding=True,
         truncation=True,
         return_attention_mask=True,
