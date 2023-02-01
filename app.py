@@ -1,5 +1,6 @@
 from transformers import pipeline
 import torch
+import numpy as np
 
 # Init is ran on server startup
 # Load your model to GPU as a global variable here using the variable name "model"
@@ -13,7 +14,8 @@ def init():
 # Reference your preloaded global model variable here.
 def inference(model_inputs:dict) -> dict:
     global model
-
+    for key in model_inputs.keys(): 
+        model_inputs[key]= model_inputs[key].astype(np.int64)
     # Parse out your arguments
     prompt = model_inputs.get('prompt', None)
     if prompt == None:
