@@ -33,7 +33,7 @@ def inference(model_inputs:dict) -> dict:
         inputs[key]= inputs[key].astype(np.int64)
     # Run the model
     onnx_preds = session.run(None, dict(inputs))[0]
-    result = dict(zip(model_inputs, onnx_preds))
+    result = dict(zip(model_input, onnx_preds))
 
     # Return the results as a dictionary
     return result
