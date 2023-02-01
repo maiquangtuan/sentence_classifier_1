@@ -3,7 +3,7 @@
 
 import requests
 
-model_inputs = {'prompt': 'Scaled dot product attention:\n\n\\['}
+model_inputs = ["i loved the spiderman movie!", "pineapple on pizza is the worst 🤮"]
 
 res = requests.post('http://localhost:8000/', json = model_inputs)
 
