@@ -3,8 +3,8 @@
 
 import requests
 
-model_inputs = ["i loved the spiderman movie!", "pineapple on pizza is the worst 🤮"]
+model_inputs = {["i loved the spiderman movie!", "pineapple on pizza is the worst 🤮"]}
 
 res = requests.post('http://localhost:8000/', json = model_inputs)
 
-print(res)
+print(res.json())
